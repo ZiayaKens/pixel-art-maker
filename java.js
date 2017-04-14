@@ -1,3 +1,13 @@
+var curious = document.getElementsByClassName('whatcolor')[0];
+curious.style.backgroundColor = 'white';
+var currentcolor = curious.style.backgroundColor;
+console.log(currentcolor);
+
+
+
+
+
+
 function makePixels() {
     var container = document.getElementsByClassName('inside')[0]
     console.log(container);
@@ -109,17 +119,23 @@ function makecolorpallet() {
     }
 }
 
-var el = document.getElementsByClassName('inside')[0]; // on the DIV that holds all the pixel divs, one element to check which pixel is clicked
-el.addEventListener("click", function log(event) {
-    console.log(event.target);
+function log(event) {                      //what to do when a pixel is clicked
     event.target.style.backgroundColor = (document.getElementsByClassName('whatcolor')[0]).style.backgroundColor;
-}, false);
+}
 
-var selector = document.getElementsByClassName('colorbar')[0];
-selector.addEventListener('click', function(event) {
+function current(event) {                      // taking the color pallet selection and setting that value to the current color display
     var current = document.getElementsByClassName('whatcolor')[0];
     current.style.backgroundColor = event.target.style.backgroundColor;
-}, false);
+}
+
+
+
+
+var el = document.getElementsByClassName('inside')[0]; // on the DIV that holds all the pixel divs, one element to check which pixel is clicked
+el.addEventListener("click", log, false);
+
+var selector = document.getElementsByClassName('colorbar')[0];
+selector.addEventListener('click', current, false);
 
 
 makecolorpallet();

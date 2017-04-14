@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+.whatcolor {
+  width: 180px;
+  height: 50px;
+  margin: 10px;
+  background-color: white;
+}
+
 .pixels {
 background-color: green;
 padding: 10px;
@@ -10,9 +17,10 @@ height: 820px;
 width: 620px;
 position: absolute;
 }
-.pixel{
+
+/*.pixel{
   /*display: none;*/
-}
+/*}*/
 .inside {
   background-color: gray;
   /*text-align: center;*/
@@ -34,12 +42,6 @@ position: absolute;
   float: right;
 }
 
-.whatcolor {
-  width: 180px;
-  height: 50px;
-  margin: 10px;
-  background-color: white;
-}
 
 body {
   position: relative;
